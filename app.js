@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.send('Welcome to the Express API');
+});
+
+app.get('/api/greet', (req, res) => {
+  res.json({ message: 'Hello, this is a simple Node.js web service!' });
 });
 
 const PORT = process.env.PORT || 3000;
